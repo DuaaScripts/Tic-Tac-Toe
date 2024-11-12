@@ -1,0 +1,143 @@
+/* Style for the whole page */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  animation: backgroundGlow 5s infinite alternate;
+}
+
+/* Background glow effect */
+@keyframes backgroundGlow {
+  from {
+    background-color: #f0f0f0;
+  }
+  to {
+    background-color: #b3e5fc;
+  }
+}
+
+/* Main container for the game */
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Game status text */
+.status {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 5px #ff5252;
+}
+
+/* Board layout with rows */
+.board-row {
+  display: flex;
+}
+
+/* Style for each square */
+.square {
+  background-color: #4fc3f7;
+  border: 3px solid #0277bd;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 0 10px #0277bd;
+  border-radius: 10px;
+}
+
+/* Hover effect on the square */
+.square:hover {
+  background-color: #0288d1;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #0288d1;
+}
+
+/* When square is clicked */
+.square:active {
+  background-color: #01579b;
+}
+
+/* Remove focus outline */
+.square:focus {
+  outline: none;
+}
+
+/* Glowing effect for buttons */
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4081;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff4081;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #f50057;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #f50057;
+}
+
+/* Active button effect */
+button:active {
+  background-color: #c51162;
+  transform: scale(0.98);
+}
+
+/* Styling for the list of moves */
+ol {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for individual list items (moves) */
+li {
+  margin-bottom: 10px;
+}
+
+/* Game info (history section) */
+.game-info {
+  margin-left: 30px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .game {
+    flex-direction: column;
+  }
+
+  .game-info {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
